@@ -1,0 +1,458 @@
+@import url('reset.css');
+
+/* GLOBAL CLASSES */
+body {
+	color: #212121;
+	font-size: 14px;
+	font-family: 'Roboto';
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.title {
+	font-size: 36px;
+	font-weight: 700;
+}
+
+.btn {
+	display: inline-block;
+	padding: 18px 62px;
+	text-decoration: none;
+	color: #fff;
+	background: #2196F3;
+	border-radius: 4px;
+	cursor: pointer;
+	border: 0;
+	font-weight: 700;
+	font-size: 16px;
+}
+
+/* HEADER */
+.header {
+	padding: 25px 0;
+	box-shadow: 0 2px 0 0 #ECECEC;
+}
+
+.header a {
+	text-decoration: none;
+	color: #212121;
+}
+
+.header a:hover {
+	color: #2196F3;
+}
+
+.header a.active {
+	color: #2196F3;
+}
+
+.header-container {
+	display: flex;
+	align-items: center;
+}
+
+.header-logo {
+	margin-right: 98px;
+}
+
+.header-list {
+	display: flex;
+	gap: 50px;
+}
+
+.header-contacts {
+	margin-left: auto;
+	display: flex;
+	gap: 50px;
+}
+
+.container-menu-item {
+	position: relative;
+}
+
+.container-menu-item:hover .header-submenu {
+	display: block;
+}
+
+.header-submenu {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	padding: 32px 0 0;
+	display: none;
+}
+
+.header-submenu-item a {
+	background: #757575;
+	padding: 2px;
+	color: white;
+	box-shadow: 0 0 3px 3px #888888;
+}
+
+.header-submenu-item {
+	padding: 5px;
+}
+
+.header-submenu-item-add{
+	opacity: 0;
+	position: absolute;
+	top: 85%;
+	left: -135%;
+}
+
+.header-submenu-item-hover:hover .header-submenu-item-add {
+	opacity: 1;
+}
+
+
+/* HERO */
+
+.hero {
+	height: 600px;
+	background: linear-gradient(rgba(47, 48, 58, .4), rgba(47, 48, 58, .4)), #2F303A url(../img/hero-background.jpg) no-repeat center/ cover;
+	color: #fff;
+	display: flex;
+	align-items: center;
+}
+
+.hero-container {
+	text-align: center;
+}
+
+.hero-title {
+	font-size: 44px;
+	font-weight: 900;
+	line-height: 60px;
+	text-transform: uppercase;
+	width: 700px;
+	margin-bottom: 30px;
+}
+
+/* ABOUT */
+
+.about {
+	padding: 94px 0;
+}
+
+.about-cards {
+	display: flex;
+	gap: 30px;
+	line-height: 24px;
+}
+
+.about-card {
+	flex: 1 1 25%;
+	position: relative;
+	padding-top: 130px;
+}
+
+.about-card-title {
+	font-weight: 700;
+	margin-top: 10px;
+	text-transform: uppercase;
+}
+
+.about-card-desc {
+	color: #757575;
+	text-align: justify;
+}
+
+.about-card::before{
+	content: '';
+	height: 120px;
+	position: absolute;
+	inset: 0;
+	background: #f5f4fa url(../img/antenna\ 1.svg) no-repeat 50% / 70px 70px;
+	border-radius: 4px;
+}
+
+.about-card:nth-child(2)::before{
+	background: #f5f4fa url(../img/clock\ 1.svg) no-repeat 50% / 70px 70px;
+}
+
+.about-card:nth-child(3)::before{
+	background: #f5f4fa url(../img/diagram\ 1.svg) no-repeat 50% / 70px 70px;
+}
+
+.about-card:nth-child(4)::before{
+	background: #f5f4fa url(../img/astronaut\ 1.svg) no-repeat 50% / 70px 70px;
+}
+
+/* DO SECTION */
+.do {
+	padding: 0 0 94px;
+}
+
+.do-title {
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.do-cards {
+	display: flex;
+	gap: 30px;
+}
+
+.do-card {
+	flex: 1 1 30%;
+	position: relative;
+}
+
+.do-card-img {
+	width: 100%;
+	height: 294px;
+	object-fit: cover;
+}
+
+.do-card-title {
+	height: 70px;
+	background: rgba(47, 48, 58, .8);
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 0;
+}
+
+.do-card:hover > .do-card-title{
+	opacity: 1;
+}
+
+/* TEAM */
+
+.team {
+	background-color: #f5f4fa;
+	padding: 94px 0;
+}
+
+.team-head {
+	font-size: 36px;
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.employees {
+	display: flex;
+	gap: 30px;
+}
+
+.employee {
+	flex: 1 1 25%;
+	background-color: white;
+	border-radius: 4px;
+	box-shadow: 0 2px 0 0 #a8a7ab;	
+}
+
+.employee > img {
+	width: 100%;
+	height: 260px;
+	object-fit: cover;
+}
+
+.employee-info {
+	padding: 24px;
+
+}
+
+.employee-info > h3 {
+	font-size: 16px;
+	font-weight: 500;
+	text-align: center;
+	margin-bottom: 12px;
+}
+
+.employee-info > p {
+	font-size: 16px;
+	font-weight: 400;
+	text-align: center;
+	color: #757575;
+}
+
+/* FOOTER */
+
+.footer {
+	background-color: #2F303A;
+	padding: 60px 0;
+}
+
+.footer-logo{
+	margin-bottom: 19px;
+}
+
+.footer-adress>p{
+	color: white;
+	margin-bottom: 14px;
+}
+
+.footer-adress>a{
+	margin-bottom: 14px;
+	display: block; /* Використав його тому що посилання знизу ставали в рядок а не один під одним */
+	color: #757575;
+}
+
+.footer-adress a:hover {
+	color: #2196F3;
+}
+
+/* BUTTONS */
+
+.buttons-sec{
+	padding-top: 98px;
+}
+
+.buttons{
+	text-align: center;
+}
+
+.buttons>:nth-child(n) {
+	padding: 12px 30px;
+	text-decoration: none;
+	color: #212121;
+	background: #f5f4fa;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: 500;
+	font-size: 16px;
+	margin: 0 2px 0 2px;
+}
+
+.buttons > .tiles-button-1 {
+	background-color: #2196F3;
+	color: white;
+	box-shadow: 0 2px 0 0 #d4d4d4;
+}
+
+.buttons>:nth-child(n):hover {
+	color: white;
+	background-color: #2196F3;
+}
+
+/* TILES */
+
+.tiles-sec {
+	padding: 50px 0 98px 0;
+}
+
+.tiles-main {
+	display: flex;
+	gap: 30px;
+	flex-wrap: wrap;
+}
+
+.tile {
+	box-shadow: 0 0 2px 2px #f6f3fa;
+	position: relative;
+	width: 370px;
+}
+
+.tile>img{
+	height: 294px;
+	width: 100%;
+	object-fit: cover;
+}
+
+.hover-text{
+	height: 294px;
+	background: rgba(49, 155, 255, 0.801);
+	font-size: 18px;
+	font-weight: 400;
+	color: white;
+	display: flex;
+	align-items: center;
+	position: absolute;
+	line-height: 28px;
+	padding: 20px;
+	bottom: 100px;
+	top: 0;
+	left: 0;
+	right: 0;
+	opacity: 0;
+}
+
+.tile:hover > .hover-text{
+	opacity: 1;
+}
+
+.tile-info{
+	padding: 10px;
+}
+
+.tile-info>h2{
+	font-size: 18px;
+	font-weight: 700;
+	padding: 15px 0 4px 4px;
+}
+
+.tile-info>p{
+	font-size: 16px;
+	font-weight: 400;
+	color: #757575;
+	padding: 15px 0 10px 4px;
+}
+
+/* Regular Cusmoters */
+
+.customers{
+	padding: 184px;
+}
+.customers-head{
+	font-size: 36px;
+	font-weight: 700;
+	text-align: center;
+	margin-top: -80px; /* Використав як швидке рішення шоб підняти текст */
+}
+
+/* Також хотів запитати чи можна писати дів та в ньому нічого. Якщо заглянете в index в regular customers там видно що я їх використовував.*/
+
+.customer-logos{
+	gap: 30px;
+	display: flex;
+	margin: 60px 0 20px 0;
+}
+
+.customer-logo{
+	position: relative;
+	flex: 1 1 15%;
+}
+
+.customer-logo::before{
+	content: '';
+	height: 100px;
+	position: absolute;
+	inset: 0;
+	background:  url(../img/company-1.svg) no-repeat 50% / 106px 60px;
+	box-shadow: 0 0 1px 1px #abb1b8;
+	border-radius: 4px;
+}
+
+.customer-logo:nth-child(2)::before{
+	background:  url(../img/company-2.svg) no-repeat 50% / 106px 60px;
+}
+
+.customer-logo:nth-child(3)::before{
+	background:  url(../img/company-3.svg) no-repeat 50% / 106px 60px;
+}
+
+.customer-logo:nth-child(4)::before{
+	background:  url(../img/company-4.svg) no-repeat 50% / 106px 60px;
+}
+
+.customer-logo:nth-child(5)::before{
+	background:  url(../img/company-5.svg) no-repeat 50% / 106px 60px;
+}
+
+.customer-logo:nth-child(6)::before{
+	background:  url(../img/company-6.svg) no-repeat 50% / 106px 60px;
+}
